@@ -66,6 +66,9 @@ const start = () => {
         if (text === '/info') {
             return bot.sendMessage(chatId, 'Это расписание мероприятий на текущую неделю');
         }
+        if (text === '/game') {
+            return startGame(chatId);
+        }
 
         if (text === '/gpt') {
             chats[chatId] = { awaitingRecipe: true };
