@@ -1,3 +1,4 @@
+
 const TelegramApi = require('node-telegram-bot-api');
 require('dotenv').config();
 const fetch = require('node-fetch'); // Используем require вместо динамического импорта
@@ -6,6 +7,7 @@ const bot = new TelegramApi(token, { polling: true });
 const { gameOptions, againOptions } = require('./options');
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY;
 const chats = {};
+
 
 // Функция общения с ChatGPT
 async function chatWithGPT(userMessage) {
@@ -73,6 +75,8 @@ const start = () => {
         if (text === '/gpt') {
             chats[chatId] = { awaitingRecipe: true };
             return bot.sendMessage(chatId, 'Скажите рецепт какого блюда вас интересует?');
+
+            
         }
 
         if (chats[chatId] && chats[chatId].awaitingRecipe) {
