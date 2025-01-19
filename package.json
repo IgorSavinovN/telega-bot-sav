@@ -1,15 +1,20 @@
 {
-  "name": "my_telegram_bot",
+  "name": "my-telegramm-bot",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "start": "nodemon index.js",
+    "type": "module"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
-    "node-telegram-bot-api": "^0.66.0"
+    "node-fetch": "^3.3.2",
+    "node-telegram-bot-api": "^0.66.0",
+    "nodemon": "^3.1.9"
   }
 }
+
