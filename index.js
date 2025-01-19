@@ -1,4 +1,5 @@
 const TelegramApi = require('node-telegram-bot-api');
+require('dotenv').config();
 const fetch = require('node-fetch'); // Используем require вместо динамического импорта
 const token = process.env.TG_API_KEY;
 const bot = new TelegramApi(token, { polling: true });
